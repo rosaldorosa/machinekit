@@ -176,6 +176,8 @@ INSTALL_DIRS :=
 # Submakefiles from each of these directories will be included if they exist
 SUBDIRS := \
 	\
+	rtapi/rtapi_math \
+	\
 	machinetalk \
 	machinetalk/support \
 	machinetalk/messagebus \
@@ -187,8 +189,6 @@ SUBDIRS := \
 	machinetalk/mkwrapper \
 	machinetalk/mklauncher \
 	machinetalk/videoserver \
-	\
-	rtapi/rtapi_math \
 	\
 	libnml/linklist \
 	libnml/cms \

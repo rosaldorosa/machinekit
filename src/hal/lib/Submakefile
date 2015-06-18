@@ -63,7 +63,7 @@ $(HALLIB).0: \
 	@rm -f $@
 	$(Q)$(CC) $(LDFLAGS) -Wl,-rpath,$(EMC2_RTLIB_DIR) \
 	    -Wl,-soname,$(notdir $@) -shared \
-	    -o $@ $^ -lstdc++ -ldl -lrt $(PROTOBUF_LIBS) $(PROTOCXXLIB) $(CZMQ_LIBS) $(RT_LDFLAGS)
+	    -o $@ $^ -l rtapi_math -lstdc++ -ldl -lrt $(PROTOBUF_LIBS) $(PROTOCXXLIB) $(CZMQ_LIBS) $(RT_LDFLAGS)
 
 HALMODULESRCS := $(HALLIBDIR)/halmodule.cc
 PYSRCS += $(HALMODULESRCS)
